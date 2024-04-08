@@ -18,7 +18,7 @@ Tech Stack:
 1. Wall Detection
    - Create a 3D core project in Unity and import necessary AR and XR packages.
    - Add 'AR session origin' and 'AR session' from the hierarchy, then attach the 'AR Plane Manager' component to 'AR session origin'.
-   - Configure an 'AR default plane' prefab to detect only vertical planes from detection mode.
+   - Configure an 'AR default plane' prefab in AR Plane Manager's prefab to detect only vertical planes from detection mode.
    - Update build and player settings as per user requirements.
    - This process will detect vertical walls and create a mesh renderer on them.
   
