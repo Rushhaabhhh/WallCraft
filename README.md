@@ -1,18 +1,45 @@
-# WallCraft
 
-1. Introduction
+##WallCraft
 
-The purpose of this document is to outline the technical approach, algorithm, and implementation plan for developing an app that detects walls in a room and applies selected wall panel designs to these walls using the Meta Quest SDK. The app aims to provide users with a seamless experience in selecting and applying wall panels, ensuring that they only cover the visible wall planes and not obstruct any objects in the room.
+#Introduction
 
-2. Approach
+This document outlines the technical approach, algorithm, and implementation plan for the development of WallCraft, an app designed to detect walls in a room and apply selected wall panel designs using the Meta Quest SDK. The goal is to offer users a seamless experience in customizing their wall panels while ensuring they do not obstruct any objects in the room.
+
+Tech Stack:
+
+C#
+Oculus SDK
+OpenXR
+Unity
+JavaScript (WebXR)
+
+#Approach
+
+1. Wall Detection
    
-   2.1 : Wall Detection
-         -> In unity, create 3D core project and import required AR and XR packages.
-         -> Add 'AR session origin' and 'AR session' from hierarchy and under AR session origin, add 'AR Plane Manager' component.
-         -> Create an 'AR default plane' and place it in plane prefab of AR origin, change the detection mode to vertical which limits to detect                only the vertical planes, and not floor and ceiling.
-         -> Update the build and player setting according to user requirements.
-   This steps will detect all the vertical walls and create a mess renderer on them.
+Create a 3D core project in Unity and import necessary AR and XR packages.
+Add 'AR session origin' and 'AR session' from the hierarchy, then attach the 'AR Plane Manager' component to 'AR session origin'.
+Configure an 'AR default plane' prefab to detect only vertical planes.
+Update build and player settings as per user requirements.
+This process will detect vertical walls and create a mesh renderer on them.
 
-   2.2 : Carousel UI for Wall Panels
-   			-> Add 'canvas' from UI and set its resolution, add 'scrollview' component and set the functions in 					 it, like movement type, horizontal or vertical.
-   			-> Inside scrollview, add multiple panels to contain the scrollable content, 
+2. Carousel UI for Wall Panels
+   
+Add a 'canvas' from UI and set its resolution.
+Attach a 'scrollview' component to enable horizontal or vertical scrolling.
+Customize UI elements such as buttons and dot animations.
+Add an 'AR default plane' and write a script to handle the transition from 2D to AR.
+Upon interaction with the 2D scroll view (e.g., clicking on an item), deactivate the Canvas containing the 2D scroll view UI elements, and activate the AR session and AR content GameObject(s) to show the AR environment.
+
+Pseudo code for the same:
+public void TransitionToAR()
+{
+    // Deactivate 2D scroll view canvas
+    scrollViewCanvas.SetActive(false);
+    
+    // Activate AR session
+    arSession.enabled = true;
+    
+    // Activate AR content
+    arContent.SetActive(true);
+}
