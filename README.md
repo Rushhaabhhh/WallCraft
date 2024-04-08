@@ -1,19 +1,19 @@
 
-## WallCraft
+# WallCraft
 
-# Introduction
+## Introduction
 
 This document outlines the technical approach, algorithm, and implementation plan for the development of WallCraft, an app designed to detect walls in a room and apply selected wall panel designs using the Meta Quest SDK. The goal is to offer users a seamless experience in customizing their wall panels while ensuring they do not obstruct any objects in the room.
 
 Tech Stack:
 
- C#
- Oculus SDK
- OpenXR
- Unity
- JavaScript (WebXR)
+ - C#
+ - Oculus SDK
+ - OpenXR
+ - Unity
+ - JavaScript (WebXR)
 
-# Approach
+## Approach
 
 1. Wall Detection
    - Create a 3D core project in Unity and import necessary AR and XR packages.
@@ -45,4 +45,4 @@ Pseudo code for the same:
  3. Overlay selected wall panels onto the detected vertical wall planes.
     - Create materials for wall panels and customize them according to the content (e.g., color, texture).
     - Create an empty object i.e., 'ShapeCreator', add C# script with the logic of updating the vertical wall planes according to the selected wall panel, add the created materials under the        shapecreator script which enables the update.
-    - In the button object of the scrollview, update the shapecreator function according to the panel.
+    - In the button object of the scrollview, update the on Click() function according to the shapecreator to set the desired wall panel design.
