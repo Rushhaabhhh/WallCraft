@@ -13,4 +13,6 @@ The purpose of this document is to outline the technical approach, algorithm, an
          -> Update the build and player setting according to user requirements.
    This steps will detect all the vertical walls and create a mess renderer on them.
 
-   2.2 : 
+   2.2 : Carousel UI for Wall Panels
+   			-> Add 'canvas' from UI and set its resolution, add 'scrollview' component and set the functions in 					 it, like movement type, horizontal or vertical.
+   			-> Inside scrollview, add multiple panels to contain the scrollable content, 
