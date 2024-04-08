@@ -7,23 +7,26 @@ This document outlines the technical approach, algorithm, and implementation pla
 
 Tech Stack:
 
-C#
-Oculus SDK
-OpenXR
-Unity
-JavaScript (WebXR)
+ C#
+ Oculus SDK
+ OpenXR
+ Unity
+ JavaScript (WebXR)
 
 #Approach
 
 1. Wall Detection
+   
    
 - Create a 3D core project in Unity and import necessary AR and XR packages.
 - Add 'AR session origin' and 'AR session' from the hierarchy, then attach the 'AR Plane Manager' - -component to 'AR session origin'.
 - Configure an 'AR default plane' prefab to detect only vertical planes.
 - Update build and player settings as per user requirements.
 - This process will detect vertical walls and create a mesh renderer on them.
+  
 
 2. Carousel UI for Wall Panels
+
    
 - Add a 'canvas' from UI and set its resolution.
 - Attach a 'scrollview' component to enable horizontal or vertical scrolling.
