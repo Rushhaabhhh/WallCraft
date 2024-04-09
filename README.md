@@ -79,3 +79,44 @@ Pseudo code for the same:
     - Create materials for wall panels and customize them according to the content (e.g., color, texture).
     - Create an empty object i.e., 'ShapeCreator', add C# script with the logic of updating the vertical wall planes according to the selected wall panel, add the created materials under the shapecreator script which enables the update.
     - In the button object of the scrollview, update the on Click() function according to the shapecreator numbering to set the desired wall panel design in the panels of scrollview.
+
+4. Object filteration algorithm
+  - An object recognition library will be required, research available pre-trained object recognition models like YOLO, SSD, or MobileNet, choose a model based on factors such as accuracy, efficiency, and compatibility with Unity.
+  - Import necessary components like Unity ML-Agents toolkit, download the pre-trained model files, including model architecture and weights and if required convert the model files to TensorFlow Lite for format compatibilty with unity.
+  - Write C# script to handle integration of the object recognition model, including functions for loading the model, preprocessing input images, running inference, and post-processing outputs.
+  - Determine input source and output visualization, whether input images will be captured from a camera feed or loaded as static images, and format for visualizing object detection outputs focusing on walls for e.g., drawing bounding boxes around detected objects to distinguish them from walls.
+
+Pseudo code :  
+
+    private ObjectRecognitionModel recognitionModel;
+    public Material wallMaterial;
+
+    void Start() {
+        recognitionModel = new ObjectRecognitionModel();
+    }
+
+    void Update() {
+        Texture2D inputImage = Camera.main.RenderToTexture();
+        DetectedObject[] detectedObjects = recognitionModel.DetectObjects(inputImage);
+
+        foreach (DetectedObject obj in detectedObjects) {
+            if (IsWall(obj)) {
+                RemoveMeshFromWall(obj);
+                ApplyWallPanel(obj);
+            }
+        }
+    }
+
+    bool IsWall(DetectedObject obj) {
+        return obj.Classification == ObjectClass.Wall;
+    }
+
+    void RemoveMeshFromWall(DetectedObject wall) {
+        Destroy(wall.gameObject.GetComponent<MeshRenderer>());
+        Destroy(wall.gameObject.GetComponent<MeshCollider>());
+    }
+
+    void ApplyWallPanel(DetectedObject wall) {
+        wall.gameObject.GetComponent<Renderer>().material = wallMaterial;
+    }
+    
