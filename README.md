@@ -13,6 +13,7 @@ Tech Stack:
  - OpenXR
  - Unity
  - JavaScript (WebXR)
+ - TensorFlow
 
   Terminology
   - AR: Augmented Reality
@@ -119,6 +120,6 @@ Pseudo code :
 A reference flowchart image is atttached in the repository above.
 
    # Conclusion
-   The Technical Requirements Document (TRD) provides a detailed blueprint for the development of WallCraft, an AR application utilizing technologies such as C#, Oculus SDK, OpenXR, Unity, and JavaScript (WebXR) to empower users in customizing wall panel designs seamlessly. By addressing crucial technical requirements like accurate wall detection, carousel UI implementation for panel selection, and intelligent overlay of panels onto detected vertical planes, the TRD ensures a structured approach towards achieving the app's objectives. Furthermore, considerations for integrating object recognition algorithms ensure that wall panels don't obstruct other objects in the room. This TRD serves as a solid foundation, guiding the development process towards crafting a user-friendly and immersive AR solution that holds great potential for enhancing interior customization experiences.
+   The Technical Requirements Document (TRD) provides a detailed blueprint for the development of WallCraft, an AR application utilizing technologies such as C#, Oculus SDK, OpenXR, Unity, and JavaScript (WebXR), TensorFlow to empower users in customizing wall panel designs seamlessly. By addressing crucial technical requirements like accurate wall detection, carousel UI implementation for panel selection, and intelligent overlay of panels onto detected vertical planes, the TRD ensures a structured approach towards achieving the app's objectives. Furthermore, considerations for integrating object recognition algorithms ensure that wall panels don't obstruct other objects in the room. This TRD serves as a solid foundation, guiding the development process towards crafting a user-friendly and immersive AR solution that holds great potential for enhancing interior customization experiences.
 
  
