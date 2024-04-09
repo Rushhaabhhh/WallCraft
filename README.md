@@ -5,13 +5,46 @@
 
 This document outlines the technical approach, algorithm, and implementation plan for the development of WallCraft, an app designed to detect walls in a room and apply selected wall panel designs using the Meta Quest SDK. The goal is to offer users a seamless experience in customizing their wall panels while ensuring they do not obstruct any objects in the room.
 
-Tech Stack:
+## Summary
 
+Problem Description: Users desire an AR application that accurately detects vertical walls in a room and allows them to customize wall panel designs without obstructing other objects.
+
+Tech Stack:
  - C#
  - Oculus SDK
  - OpenXR
  - Unity
  - JavaScript (WebXR)
+
+Suggested Solution: The proposed solution involves creating a 3D core project in Unity, configuring an AR Plane Manager to detect only vertical planes, and implementing a carousel UI for wall panel selection. The solution aims to seamlessly transition between 2D UI and AR content and overlay selected wall panels onto detected vertical wall planes. /////
+
+- Glossary or Terminology
+  - AR: Augmented Reality
+  - SDK: Software Development Kit
+  - XR: Extended Reality
+  - UI: User Interface
+
+- Product Requirements:
+  - Users can seamlessly customize wall panel designs.
+  - Wall detection accurately identifies vertical planes.
+  - AR content overlays selected wall panels without obstructing other objects.
+
+- Technical Requirements:
+  - Integration of AR and XR packages.
+  - Implementation of a carousel UI for wall panel selection.
+  - Development of logic for updating wall panels on detected vertical planes.
+
+- Non-Goals or Out of Scope
+  - Advanced interior design features beyond wall customization.
+  - Performance optimization for low-end devices.
+
+- Future Goals
+  - Implementation of additional interior design features.
+  - Optimization for various device configurations.
+
+- Assumptions
+  - Availability of necessary AR and XR packages.
+  - Access to machine learning models for object recognition.
 
 ## Approach
 
