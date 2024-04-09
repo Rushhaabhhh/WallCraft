@@ -1,5 +1,3 @@
-
-# Technical Requirements Document
 # WallCraft using Meta Quest SDK
 
 ## Introduction
