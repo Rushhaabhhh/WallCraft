@@ -16,7 +16,7 @@ Tech Stack:
  - Unity
  - JavaScript (WebXR)
 
-- Terminology
+Terminology
   - AR: Augmented Reality
   - SDK: Software Development Kit
   - XR: Extended Reality
@@ -44,7 +44,7 @@ Tech Stack:
   - Availability of necessary AR and XR packages.
   - Access to machine learning models for object recognition.
 
-## Approach
+## Solution Approach
 
 1. Wall Detection
    - Create a 3D core project in Unity and import necessary AR and XR packages (e.g, AR foundation, ARcore, XR Interaction Toolkit, XR Plugin Management).
