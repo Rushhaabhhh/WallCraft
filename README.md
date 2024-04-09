@@ -49,18 +49,18 @@ Suggested Solution: The proposed solution involves creating a 3D core project in
 ## Approach
 
 1. Wall Detection
-   - Create a 3D core project in Unity and import necessary AR and XR packages.
+   - Create a 3D core project in Unity and import necessary AR and XR packages (e.g, AR foundation, ARcore, XR Interaction Toolkit, XR Plugin Management).
    - Add 'AR session origin' and 'AR session' from the hierarchy, then attach the 'AR Plane Manager' component to 'AR session origin'.
-   - Configure an 'AR default plane' prefab in AR Plane Manager's prefab to detect only vertical planes from detection mode.
-   - Update build and player settings as per user requirements.
+   - Configure an 'AR default plane' prefab in AR Plane Manager's prefab, this prefab will detect the planes in the room, to get only vertical planes change the setting in detection mode.
+   - Update build and player settings as per user requirements e.g., target platform Meta Quest or Android and player setting such as resolution, input settings, API level, etc.
    - This process will detect vertical walls and create a mesh renderer on them.
   
 2. Carousel UI for Wall Panels
-   - Add a 'canvas' from UI and set its resolution.
-   - Attach a 'scrollview' component and set functions like horizontal or vertical scrolling, movement type.
-   - Add multiple panels inside scrollview, here the wall panel designs will be stored.
-   - Customize UI elements such as buttons and dot animations.
-   - Add an 'AR default plane' and write a script to handle the transition from 2D to AR.
+   - Add a 'canvas' from UI and adjust its resolution according to the requirements.
+   - Attach a 'scrollview' component inside canvas and set functions for the carousel like horizontal or vertical scrolling, movement type.
+   - Insert multiple panels within the scroll view to store the wall panel designs.
+   - Customize UI elements such as buttons and dot animation, to facilitate navigation through the wall panel designs, allowing users to select their desired options efficiently.
+   - Add an 'AR default plane' and write a C# script to handle the transition from 2D to AR.
    - Upon interaction with the 2D scroll view (e.g., clicking on an item), deactivate the Canvas containing the 2D scroll view UI elements, and activate the AR session and AR content    
      GameObject(s) to show the AR environment.
 
@@ -77,5 +77,5 @@ Pseudo code for the same:
 
  3. Overlay selected wall panels onto the detected vertical wall planes.
     - Create materials for wall panels and customize them according to the content (e.g., color, texture).
-    - Create an empty object i.e., 'ShapeCreator', add C# script with the logic of updating the vertical wall planes according to the selected wall panel, add the created materials under the        shapecreator script which enables the update.
-    - In the button object of the scrollview, update the on Click() function according to the shapecreator to set the desired wall panel design.
+    - Create an empty object i.e., 'ShapeCreator', add C# script with the logic of updating the vertical wall planes according to the selected wall panel, add the created materials under the shapecreator script which enables the update.
+    - In the button object of the scrollview, update the on Click() function according to the shapecreator numbering to set the desired wall panel design in the panels of scrollview.
