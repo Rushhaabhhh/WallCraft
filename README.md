@@ -16,9 +16,7 @@ Tech Stack:
  - Unity
  - JavaScript (WebXR)
 
-Suggested Solution: The proposed solution involves creating a 3D core project in Unity, configuring an AR Plane Manager to detect only vertical planes, and implementing a carousel UI for wall panel selection. The solution aims to seamlessly transition between 2D UI and AR content and overlay selected wall panels onto detected vertical wall planes. /////
-
-- Glossary or Terminology
+- Terminology
   - AR: Augmented Reality
   - SDK: Software Development Kit
   - XR: Extended Reality
@@ -82,7 +80,7 @@ Pseudo code for the same:
 
 4. Object filteration algorithm
   - An object recognition library will be required, research available pre-trained object recognition models like YOLO, SSD, or MobileNet, choose a model based on factors such as accuracy, efficiency, and compatibility with Unity.
-  - Import necessary components like Unity ML-Agents toolkit, download the pre-trained model files, including model architecture and weights and if required convert the model files to TensorFlow Lite for format compatibilty with unity.
+  - Import necessary components like Unity ML-Agents toolkit, download the pre-trained model files, including model architecture and weights and if required convert the model files to TensorFlow for format compatibilty with unity.
   - Write C# script to handle integration of the object recognition model, including functions for loading the model, preprocessing input images, running inference, and post-processing outputs.
   - Determine input source and output visualization, whether input images will be captured from a camera feed or loaded as static images, and format for visualizing object detection outputs focusing on walls for e.g., drawing bounding boxes around detected objects to distinguish them from walls.
 
