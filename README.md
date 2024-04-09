@@ -1,13 +1,13 @@
 
-# WallCraft
+# Technical Requirements Document
+# WallCraft using Meta Quest SDK
 
 ## Introduction
 
 This document outlines the technical approach, algorithm, and implementation plan for the development of WallCraft, an app designed to detect walls in a room and apply selected wall panel designs using the Meta Quest SDK. The goal is to offer users a seamless experience in customizing their wall panels while ensuring they do not obstruct any objects in the room.
 
-## Summary
-
-Problem Description: Users desire an AR application that accurately detects vertical walls in a room and allows them to customize wall panel designs without obstructing other objects.
+## Problem Description
+Users desire an AR application that accurately detects vertical walls in a room and allows them to customize wall panel designs without obstructing other objects.
 
 Tech Stack:
  - C#
@@ -16,7 +16,7 @@ Tech Stack:
  - Unity
  - JavaScript (WebXR)
 
-Terminology
+  Terminology
   - AR: Augmented Reality
   - SDK: Software Development Kit
   - XR: Extended Reality
@@ -117,4 +117,10 @@ Pseudo code :
     void ApplyWallPanel(DetectedObject wall) {
         wall.gameObject.GetComponent<Renderer>().material = wallMaterial;
     }
-    
+
+A reference flowchart image is atttached in the repository above.
+
+   # Conclusion
+   The Technical Requirements Document (TRD) provides a detailed blueprint for the development of WallCraft, an AR application utilizing technologies such as C#, Oculus SDK, OpenXR, Unity, and JavaScript (WebXR) to empower users in customizing wall panel designs seamlessly. By addressing crucial technical requirements like accurate wall detection, carousel UI implementation for panel selection, and intelligent overlay of panels onto detected vertical planes, the TRD ensures a structured approach towards achieving the app's objectives. Furthermore, considerations for integrating object recognition algorithms ensure that wall panels don't obstruct other objects in the room. This TRD serves as a solid foundation, guiding the development process towards crafting a user-friendly and immersive AR solution that holds great potential for enhancing interior customization experiences.
+
+ 
